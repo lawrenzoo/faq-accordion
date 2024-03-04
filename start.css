@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+    --lighterpurple: hsl(281, 83%, 54%)
+}
+body{
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    font-family: 'Work Sans', sans-serif;
+    height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.faq-body{
+    /* border: 1px solid red; */
+    background-color: var(--White);
+    max-width: 650px;
+    padding: 30px 55px;
+    border-radius: 15px;
+    box-shadow: 0pc 30px 30px var(--Grayishpurple);
+}
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.faq-header>h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--Darkpurple);
+    font-family: 'Work Sans', sans-serif;
+  }
+
+.logo-img {
+    margin-right: 10px;
+}
+.faq-content{
+    margin-top: 35px;
+}
+.sub-header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-header h3{
+  color: var(--Darkpurple) ;
+  transition: color 0.3s ease;
+}
+.sub-header h3:hover{
+  color: var(--lighterpurple);
+  cursor: pointer;
+}
+.icon-toggle{
+  /* border: 2px solid purple; */
+  cursor: pointer;
+}
+.icon-toggle > .minus{
+  display: none;
+  transition: opacity 0.3s ease;
+}
+.faq-text .display{
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: var(--Grayishpurple);
+  display: none;
+  transition: opacity 1s ease;
+  /* opacity: 0; */
+}
+
+
+@media(max-width:900px){
+  body{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
+}
+
+@media(max-width:760px){
+  body{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    padding: 20px;
+    height: auto;
+  }
+  .faq-body{
+    margin-top: 100px;
+    max-width: 500px;
+    padding: 25px 40px;
+    border-radius: 13px;
+    box-shadow: 0pc 30px 30px var(--Grayishpurple);
+}
+}
